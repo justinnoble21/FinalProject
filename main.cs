@@ -27,5 +27,18 @@ class MainClass {
 
     author1.RemoveBook(book1);
     author1.DisplayBooks();
+
+    Patron patron1 = new Patron("First1", "Last1", "ID1");
+    Patron patron2 = new Patron("First2", "Last2", "ID2");
+    Patron patron3 = new Patron("First3", "Last3", "ID3");
+    Patron patron4 = new Patron("First4", "Last4", "ID4");
+    Patron patron5 = new Patron("First5", "Last5", "ID5");
+
+    patron1.AddToRentalCart(book1, new DateTime(2021, 01, 07));
+
+    patron1.AddToRentalCart(book3, DateTime.Today);
+    patron1.RemoveFromRentalCart(book3);
+
+    patron1.Display();
   }
 }
