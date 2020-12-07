@@ -40,5 +40,19 @@ class MainClass {
     patron1.RemoveFromRentalCart(book3);
 
     patron1.Display();
+
+    LibraryCollection collection = new LibraryCollection();
+
+    collection.AddPatron(patron1);
+    collection.AddPatron(patron2);
+    collection.AddPatron(patron3);
+    collection.AddPatron(patron4);
+    collection.AddPatron(patron5);
+
+    collection.DisplayPatronInfo();
+
+    collection.RemovePatron(patron5);
+
+    collection.DisplayPatronInfo();
   }
 }
